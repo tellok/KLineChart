@@ -6,11 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     steps:
     - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v3
@@ -22,11 +18,7 @@ jobs:
 
   publish-npm:
     needs: build
-    runs-on:
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     steps:
     - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v3
