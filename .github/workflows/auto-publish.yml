@@ -9,7 +9,7 @@ on:
 
 jobs:
   publish:
-    runs-on: ["self-hosted", "ubuntu-latest"]
+    runs-on: "ubuntu-latest"
     permissions:
       contents: write
       packages: write

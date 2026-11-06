@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: ["self-hosted", "ubuntu-latest"]
+    runs-on: "ubuntu-latest"
     steps:
     - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v3
@@ -18,7 +18,7 @@ jobs:
 
   publish-npm:
     needs: build
-    runs-on: ["self-hosted", "ubuntu-latest"]
+    runs-on: "ubuntu-latest"
     steps:
     - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v3
